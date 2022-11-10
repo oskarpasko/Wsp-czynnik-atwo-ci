@@ -1,0 +1,1 @@
+# Wsp-czynnik-atwo-ci
