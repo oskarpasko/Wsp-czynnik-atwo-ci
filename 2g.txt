@@ -1,0 +1,97 @@
+Podaj nazwę klasy: 2g
+Podaj liczbę uczniów klasy 2g: 38
+Podaj liczbę zadań na sprawdzianie: 15
+
+Podaj liczbę punktów do zdobycia za Zadanie 1: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 1.: 7
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 2: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 2.: 14
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 3: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 3.: 13
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 4: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 4.: 10
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 5: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 5.: 7
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 6: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 6.: 10
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 7: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 7.: 8
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 8: 2
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 8.: 8.5
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 9: 2
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 9.: 4
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 10: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 10.: 14
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 11: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 11.: 7
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 12: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 12.: 11
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 13: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 13.: 7
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 14: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 14.: 11
+
+
+
+Podaj liczbę punktów do zdobycia za Zadanie 15: 1
+Podaj liczbę punktów uzyskanych przez uczniów z Zadania 15.: 4
+
+
+Współczynnik Łatwości dla Zadania 1: 0.18
+Współczynnik Łatwości dla Zadania 2: 0.37
+Współczynnik Łatwości dla Zadania 3: 0.34
+Współczynnik Łatwości dla Zadania 4: 0.26
+Współczynnik Łatwości dla Zadania 5: 0.18
+Współczynnik Łatwości dla Zadania 6: 0.26
+Współczynnik Łatwości dla Zadania 7: 0.21
+Współczynnik Łatwości dla Zadania 8: 0.11
+Współczynnik Łatwości dla Zadania 9: 0.05
+Współczynnik Łatwości dla Zadania 10: 0.37
+Współczynnik Łatwości dla Zadania 11: 0.18
+Współczynnik Łatwości dla Zadania 12: 0.29
+Współczynnik Łatwości dla Zadania 13: 0.18
+Współczynnik Łatwości dla Zadania 14: 0.29
+Współczynnik Łatwości dla Zadania 15: 0.11
+
+Zadania Bardzo Trudne: [1, 5, 8, 9, 11, 13, 15]
+Zadania Trudne: [2, 3, 4, 6, 7, 10, 12, 14]
+Średni Wynik Klasy: 23,8%
