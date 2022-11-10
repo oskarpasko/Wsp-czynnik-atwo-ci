@@ -10,7 +10,7 @@ zadania_bardzo_trudne = []
 
 for x in range(0, int(liczba_zadan)):
     zadanie_pkt = int(input(f'\nPodaj liczbę punktów do zdobycia za Zadanie {x+1}: '))
-    uczniowie_pkt = int(input(f'Podaj liczbę punktów uzyskanych przez uczniów z Zadania {x+1}.: '))
+    uczniowie_pkt = float(input(f'Podaj liczbę punktów uzyskanych przez uczniów z Zadania {x+1}.: '))
     wspolczynnik_latwosci.append(float(round(((uczniowie_pkt/liczba_uczniow)/zadanie_pkt), 2)))
 
     print('\n')
