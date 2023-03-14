@@ -93,8 +93,6 @@ function policz()
     let sum_points = new Array(tasks_amount);
     for(let s=0;s<tasks_amount;s++)sum_points[s]=0;
 
-    console.log("Tablica pkt do zdobycia: "+tasks_points);
-
     // wpisywanie w tablice 2d punktów zdobytych przez uczniów
     for(var i=0;i<students;i++)
     {
@@ -104,9 +102,6 @@ function policz()
             sum_points[j] = parseInt(sum_points[j]) +  parseInt(student_point[i][j]);
         }
     }
-
-    console.log("Pkt studentów: "+student_point);
-    console.log("Sumy pkt: "+sum_points);
 
     // tablica współczynnika łatwości
     let ease_factor = [];
@@ -123,9 +118,10 @@ function policz()
         if(parseFloat(ease_factor[x]) >= 0.2 && parseFloat(ease_factor[x]) < 0.5) hard_tasks.push(x+1)
     }
 
-    console.log("Współczynnik Łatwości: "+ease_factor);
-    console.log("Zadania trudne: "+hard_tasks);
-    console.log("Zadania bardzo trudne: "+very_hard_tasks);
+    document.getElementById("class_name").innerHTML = ""+class_name;
+    document.getElementById("wsp-lat").innerHTML = ease_factor;
+    document.getElementById("trudne").innerHTML = hard_tasks;
+    document.getElementById("btrudne").innerHTML = very_hard_tasks;
     
 }
 
