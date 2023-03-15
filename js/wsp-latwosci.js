@@ -14,7 +14,7 @@ function generate()
     while (container.hasChildNodes()) {container.removeChild(container.lastChild);}
 
     var header = document.createElement("h6");
-        header.className = "card-title";
+        header.className = "card-title text-white";
         header.textContent = "Punkty do zdobycia: ";
         container.appendChild(header);
 
@@ -40,7 +40,7 @@ function generate()
     for(let i=0;i<students;i++)
     {
         var header = document.createElement("h6");
-        header.className = "card-title mt-5";
+        header.className = "card-title mt-5 text-white";
         header.textContent = "Uczeń nr " + (i+1);
 
         var row = document.createElement("div");
@@ -111,7 +111,7 @@ function policz()
             }else
             {
                 var input = document.querySelectorAll(`input[name=student_pkt${i + 1}]`)[j];
-                input.className = "form-control form-control-sm";
+                input.className = "form-control form-control-sm bg-success";
                 sum_points[j] = parseInt(sum_points[j]) +  parseInt(student_point[i][j]);
             }
         }
@@ -127,18 +127,34 @@ function policz()
 
     for(let x=0;x<tasks_amount;x++)
     {
-        ease_factor[x] = parseFloat(((sum_points[x]/students)/tasks_points[x]));
+        ease_factor[x] = Math.round(parseFloat(((sum_points[x]/students)/tasks_points[x])) * 100) / 100;
 
         if(parseFloat(ease_factor[x]) >= 0 && parseFloat(ease_factor[x]) < 0.2) very_hard_tasks.push(x+1)
         if(parseFloat(ease_factor[x]) >= 0.2 && parseFloat(ease_factor[x]) < 0.5) hard_tasks.push(x+1)
     }
 
+
+    // układanie stringa z  outputem współczynnika łatwości
+    let ease_factor_output = "[  ";
+    let hard_tasks_output = "[  ";
+    let very_hard_tasks_output = "[  ";
+    for(let i=0;i<tasks_amount;i++)
+    {
+        ease_factor_output += "  "+(ease_factor[i])+"  ";
+        if(hard_tasks[i] != undefined) hard_tasks_output += "  "+(hard_tasks[i])+"  ";
+        if(very_hard_tasks[i] != undefined) very_hard_tasks_output += "  "+(very_hard_tasks[i])+"  ";
+    }
+    ease_factor_output+="]";
+    hard_tasks_output+="]";
+    very_hard_tasks_output+="]";
+
+
     if(error == false)
     {
         document.getElementById("class_name").innerHTML = ""+class_name;
-        document.getElementById("wsp-lat").innerHTML = ease_factor;
-        document.getElementById("trudne").innerHTML = hard_tasks;
-        document.getElementById("btrudne").innerHTML = very_hard_tasks;
+        document.getElementById("wsp-lat").innerHTML = ease_factor_output;
+        document.getElementById("trudne").innerHTML = hard_tasks_output;
+        document.getElementById("btrudne").innerHTML = very_hard_tasks_output;
     }
 }
 
