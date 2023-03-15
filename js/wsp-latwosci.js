@@ -56,6 +56,7 @@ function generate()
         
         
         var input = document.createElement("input");
+        input.id = "input_student"
         input.type = "text";
         input.name = "student_pkt"+(i+1);
         input.className = "form-control form-control-sm";
@@ -79,6 +80,9 @@ function policz()
     // pusta tablica do przechowania punktów za zadania
     tasks_points=[];
 
+    // zmienna do sprawdzania walidacji
+    var error = false;
+
     // wypełnienie tablicy ilością punktów za poszczególne zadanie
     for(let i=0;i<tasks_amount;i++)
     {
@@ -99,9 +103,20 @@ function policz()
         for(var j=0;j<tasks_amount;j++)
         {
             student_point[i][j]= document.querySelectorAll(`input[name=student_pkt${i + 1}]`)[j].value;
-            sum_points[j] = parseInt(sum_points[j]) +  parseInt(student_point[i][j]);
+            if(student_point[i][j] > tasks_points[j])
+            {
+                var input = document.querySelectorAll(`input[name=student_pkt${i + 1}]`)[j];
+                input.className += " bg-danger text-white";
+                error = true;
+            }else
+            {
+                var input = document.querySelectorAll(`input[name=student_pkt${i + 1}]`)[j];
+                input.className = "form-control form-control-sm";
+                sum_points[j] = parseInt(sum_points[j]) +  parseInt(student_point[i][j]);
+            }
         }
     }
+
 
     // tablica współczynnika łatwości
     let ease_factor = [];
@@ -118,10 +133,12 @@ function policz()
         if(parseFloat(ease_factor[x]) >= 0.2 && parseFloat(ease_factor[x]) < 0.5) hard_tasks.push(x+1)
     }
 
-    document.getElementById("class_name").innerHTML = ""+class_name;
-    document.getElementById("wsp-lat").innerHTML = ease_factor;
-    document.getElementById("trudne").innerHTML = hard_tasks;
-    document.getElementById("btrudne").innerHTML = very_hard_tasks;
-    
+    if(error == false)
+    {
+        document.getElementById("class_name").innerHTML = ""+class_name;
+        document.getElementById("wsp-lat").innerHTML = ease_factor;
+        document.getElementById("trudne").innerHTML = hard_tasks;
+        document.getElementById("btrudne").innerHTML = very_hard_tasks;
+    }
 }
 
