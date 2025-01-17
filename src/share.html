@@ -3,94 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Szkolne Pomoce</title>
+    <title>Punktacja sprawdzianu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/pdf.css">
   
     <style>
       body {
-        background: url('img/background.jpg') no-repeat center center fixed;
+        background: url('../img/background.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
         -o-background-size: cover;
       }
-      .card {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
-      }
     </style>
+
   </head>
-  <body class="d-flex flex-column min-vh-100 has-bg-img bg-purple bg-blend-screen">
+  <body class="d-flex flex-column min-vh-100">
     
     <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg bg-dark bg-gradient">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.jpeg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top rounded-circle">
-                  </a>
-              <a class="navbar-brand text-white" href="#">Home</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="src/wsp-lat.html">Współczynnik</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="src/punktacja.html">Punktacja</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active text-white" aria-current="page" href="src/share.html">Udostępnianie</a>
-                  </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg bg-dark bg-gradient">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+              <img src="../img/logo.jpeg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top rounded-circle">
+            </a>
+        <a class="navbar-brand text-white" href="../index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="wsp-lat.html">Współczynnik</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="punktacja.html">Punktacja</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="src/share.html">Udostępnianie</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-header text-center bg-dark text-white">
+                <h5>Pełny podgląd PDF</h5>
+              </div>
+              <div class="card-body">
+                <embed 
+                  src="../storage/Tutorial.pdf" 
+                  type="application/pdf" 
+                  width="100%" 
+                  onload="adjustPdfHeight(this)"
+                  style="border: none; min-height: 100vh;">
+                </embed>
               </div>
             </div>
-          </nav>
-
-    <!-- Cards -->
-
-    <div class="container mt-3">
-      <div class="row justify-content-center">
-          <!-- Karta 1 -->
-          <div class="col-lg-4 col-md-6 mt-5">
-              <div class="card" style="width: 18rem;">
-                  <img src="img/wsp-lat.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">Współczynnik Łatwości</h5>
-                      <p class="card-text">Algorytm pozwalający na obliczenie współczynnika łatwości z dowolnego sprawdzianu dla dowolnej ilości uczniów.</p>
-                      <a href="src/wsp-lat.html" class="btn btn-primary">Przejdź</a>
-                  </div>
-              </div>
           </div>
-  
-          <!-- Karta 2 -->
-          <div class="col-lg-4 col-md-6 mt-5">
-              <div class="card" style="width: 18rem;">
-                  <img src="img/srednia.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">Wystawianie oceny</h5>
-                      <p class="card-text">Wyliczanie punktów potrzebnych do zdobycia poszczególnej oceny ze sprawdzianu na podstawie zdobytych punktów.</p>
-                      <a href="src/punktacja.html" class="btn btn-primary">Przejdź</a>
-                  </div>
-              </div>
-          </div>
-  
-          <!-- Karta 3 -->
-          <div class="col-lg-4 col-md-6 mt-5">
-              <div class="card" style="width: 18rem;">
-                  <img src="img/share.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">Udostępnianie</h5>
-                      <p class="card-text">Instrukcja pokazująca jak udostępniać plik np. kartę ocen zachowania, za pomocą OneDrive'a oraz dziennika.</p>
-                      <a href="src/punktacja.html" class="btn btn-primary">Przejdź</a>
-                  </div>
-              </div>
-          </div>
+        </div>
       </div>
-  </div>
-  
 
     <!-- Footer -->
     <footer
@@ -166,7 +142,7 @@
     </footer>
     <!-- Footer -->
 
-    <script src="js/wsp-latwosci.js"></script>
+    <script src="../js/punktacja.js"></script>
 
     <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>-->
   </body>
